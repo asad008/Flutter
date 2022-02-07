@@ -23,7 +23,7 @@ class ItemWidget extends StatelessWidget {
           "\$ " + item.price.toString(),
           textScaleFactor: 1.5,
           style: TextStyle(
-            color: Colors.orange,
+            color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
         ),
