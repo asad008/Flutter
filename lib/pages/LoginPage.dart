@@ -76,7 +76,9 @@ class _LoginPageState extends State<LoginPage> {
                       TextFormField(
                         obscureText: true,
                         decoration: InputDecoration(
-                            hintText: "Enter Password", labelText: "Password"),
+                          hintText: "Enter Password",
+                          labelText: "Password",
+                        ),
                         validator: (value) {
                           if (value!.isEmpty) {
                             return "Password cannot be empty";
