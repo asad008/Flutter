@@ -29,6 +29,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
+    await Future.delayed(Duration(seconds: 2));
     final catalogJson =
         await rootBundle.loadString("assets/files/Catalog.json");
     final decodedData = jsonDecode(catalogJson);
@@ -58,13 +59,11 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CatalogHeader(),
-                if (CatalogModel.items.length > 5 &&
+                if (CatalogModel.items.length > 1 &&
                     CatalogModel.items.isNotEmpty)
                   CatalogList().expand()
                 else
-                  Center(
-                    child: CircularProgressIndicator(),
-                  )
+                  CircularProgressIndicator().centered().expand(),
               ],
             ),
           ),
